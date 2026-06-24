@@ -1,0 +1,34 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "Simple homepage built with HTML, CSS and Vanilla JavaScript as part of The Odin Project curriculum.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --config --open webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midhin11/homepage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/midhin11/homepage/issues"
+  },
+  "homepage": "https://github.com/midhin11/homepage#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.4",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "html-webpack-plugin": "^5.6.7",
+    "prettier": "^3.8.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.107.2",
+    "webpack-cli": "^7.0.3",
+    "webpack-merge": "^6.0.1"
+  }
+}
