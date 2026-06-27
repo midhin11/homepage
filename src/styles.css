@@ -78,7 +78,8 @@ h1 {
     width: 100%;
     text-align: center;
 
-    color: #ffffffc1;
+    color: #ffffffd8;
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
     font-weight: 400;
     font-size: 48px;
     letter-spacing: 1px;
@@ -105,7 +106,7 @@ h1 {
     width: 23px;
 }
 
-.social-links svg:hover {
+.social-links a:hover svg, .social-links a:focus-visible svg {
     fill: #7C9A92;
     transform: scale(1.2);
 }
@@ -138,11 +139,28 @@ main {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    object-position: top center;
+    object-position: center;
+}
+
+.project:nth-child(3) img, .project:nth-child(6) img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: left;
+}
+
+.project:nth-child(4) img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: 5%;
 }
 
 .project-details {
-    padding: 1rem 1.5rem 1rem 1.5rem;
+    padding: 1rem 1.5rem;
+    /* margin-top: -2.5rem; */
 }
 
 .project-name {
@@ -163,7 +181,7 @@ main {
     transition: all 0.2s ease-in-out;
 }
 
-.proj-svgs svg:hover {
+.proj-svgs a:hover svg, .proj-svgs a:focus-visible svg {
     fill: #7C9A92;
     transform: scale(1.2);
 }
@@ -177,6 +195,8 @@ h3 {
     font-size: 22px;
     font-weight: 400;
 }
+
+
 
 /* Footer */
 
@@ -204,6 +224,8 @@ footer img {
 footer p {
     line-height: 1.4;
     font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .address > div:nth-child(1) {
@@ -211,7 +233,7 @@ footer p {
 }
 
 .contact {
-    margin-top: 1.4rem;
+    margin-top: 1.6rem;
 }
 
 .contact a {
@@ -238,27 +260,45 @@ footer p {
 }
 
 .phone {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
-footer .social-links svg:hover {
+footer .social-links a:hover svg,
+footer .social-links a:focus-visible svg {
     fill: white;
 }
 
 footer .social-links {
     justify-content: flex-start;
-    margin-top: 1.5rem;
+    margin-top: 1.6rem;
 }
 
 /* Tablet view */
 
 @media (max-width: 900px) and (min-width:501px) {
+    header {
+        margin-bottom: 1rem;
+    }
+
     .about {
         display: block;
         padding: 3rem;
     }
 
-    .about-card p, footer p {
+    .about-card {
+        margin-top: 50px;
+    }
+
+    h1 {
+        top: 10px;
+        left: 0;
+        text-align: right;
+        transform: translateX(42%);
+        color: #ffffffd8;
+        text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.9);
+    }
+
+    .about-card p {
         text-align: justify;
     }
 
@@ -268,7 +308,7 @@ footer .social-links {
     }
 
     .picture img {
-        width: 300px;
+        width: 350px;
         height: 400px;
         object-fit: cover;
         object-position: 70%;
@@ -308,7 +348,7 @@ footer .social-links {
         width: 100%;
         display: block;
         object-fit: cover;
-        height: 350px;
+        height: 420px;
         object-position: 60%;
     }
 
@@ -339,16 +379,16 @@ footer .social-links {
     }
 
     .about {
-        width: 90%;
+        width: 85%;
     }
 
     .hero {
-        height: 350px;
+        height: 450px;
         transform: skewY(-33deg);
     } 
 
     main {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     main h2 {
@@ -362,7 +402,7 @@ footer .social-links {
     }
 
     .info {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     footer img {
@@ -372,5 +412,6 @@ footer .social-links {
 
     footer .social-links {
         justify-content: center;
+        margin-bottom: -20px;
     }
 }
