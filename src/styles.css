@@ -323,7 +323,6 @@ footer .social-links {
     .about {
         flex-direction: column;
         gap: 20px;
-        border: 2px solid red;
     }
 
     .about-card {
