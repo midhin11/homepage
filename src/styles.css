@@ -4,18 +4,29 @@ h1, h2, h3 {
     font-family: 'Playfair Display', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-p {
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* display: flex;
+    flex-direction: column; */
+}
+
+/* Header secton */
+header p {
     text-align: justify;
     line-height: 1.5;
+    font-size: 1.05rem;
 }
 
 header {
     position: relative;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .hero {
-    background-color: #7C9A92;
+    background-color: #819C95;
     height: 600px;
     width: 100%;
     position: absolute;
@@ -31,10 +42,9 @@ header {
     z-index: 2;
 
     display: flex;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     align-items: center;
-    border: 2px solid red;
 }
 
 .about-card {
@@ -44,7 +54,7 @@ header {
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.3);
 }
 
-.about-card h2 {
+h2 {
     font-size: 32px;
     font-weight: 400;
 }
@@ -60,49 +70,308 @@ header {
     box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.6);
 }
 
-.picture h1 {
+h1 {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-30%);
+    transform: translateX(-50%);
     width: 100%;
+    text-align: center;
 
-    color: #ffffffcb;
+    color: #ffffffc1;
     font-weight: 400;
     font-size: 48px;
     letter-spacing: 1px;
 }
 
-.svgs {
+.social-links {
     width: 100%;
     display: flex;
     gap: 15px;
     justify-content: flex-end;
+    align-items: center;
 }
 
-.svgs svg {
-    width: 20px;
+.social-links svg {
+    width: 25px;
+    transition: all 0.2s ease-in-out;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    /* display: flex;
-    flex-direction: column; */
+.social-links > a:nth-child(1) > svg {
+    width: 27px;
 }
+
+.social-links > a:nth-child(3) > svg {
+    width: 23px;
+}
+
+.social-links svg:hover {
+    fill: #7C9A92;
+    transform: scale(1.2);
+}
+
+/* Main section */
 
 main {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    border: 2px solid red;
+    margin-bottom: 4rem;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    gap: 24px;
+
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.project {
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.project-details {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.project-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.proj-svgs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.proj-svgs svg {
+    width: 22px;
+    height: 25px;
+    display: block;
+    transition: all 0.2s ease-in-out;
+}
+
+.proj-svgs svg:hover {
+    fill: #7C9A92;
+    transform: scale(1.2);
+}
+
+.projects p {
+    line-height: 1.3;
+    font-size: 0.9rem;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+/* Footer */
+
+footer {
+    background-color: #819C95;
+    color: #000000;
+}
+
+.footer-cont {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    gap: 2.5rem;
+}
+
+footer img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+}
+
+footer p {
+    line-height: 1.4;
+    font-size: 1.05rem;
+}
+
+.address > div:nth-child(1) {
+    margin-bottom: 0.2rem;
+}
+
+.contact {
+    margin-top: 1.4rem;
+}
+
+.contact a {
+    color: #1F2937;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact a:hover,
+.contact a:focus-visible {
+    color: white;
+    text-decoration: underline;
+}
+
+.phone, .mail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact svg {
+    width: 23px;
+    display: block;
+}
+
+.phone {
+    margin-bottom: 0.5rem;
+}
+
+footer .social-links svg:hover {
+    fill: white;
+}
+
+footer .social-links {
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+}
+
+/* Tablet view */
+
+@media (max-width: 900px) and (min-width:501px) {
+    .about {
+        display: block;
+        padding: 3rem;
+    }
+
+    .about-card p, footer p {
+        text-align: justify;
+    }
+
+    .picture {
+        float: left;
+        margin: -40px 20px 20px -40px;
+    }
+
+    .picture img {
+        width: 300px;
+        height: 400px;
+        object-fit: cover;
+        object-position: 70%;
+    }
+
+    .hero {
+        height: 450px;
+        transform: skewY(-18deg);
+    } 
+
+    main {
+        padding: 2.4rem;
+    }
+
+    footer img {
+        width: 45%;
+        height: auto;
+        object-fit: cover;
+        object-position: 60%;
+    }
+}
+
+
+/* Mobile view */
+
+@media (max-width: 500px) {
+    header p, footer p {
+        font-size: 0.9 rem;
+        text-align: left;
+    }
+
+    .picture {
+        margin: 0 auto;
+    }
+
+    .picture img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        height: 350px;
+        object-position: 60%;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .about {
+        flex-direction: column;
+        gap: 20px;
+        border: 2px solid red;
+    }
+
+    .about-card {
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    .about-card h2 {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .about {
+        width: 90%;
+    }
+
+    .hero {
+        height: 350px;
+        transform: skewY(-33deg);
+    } 
+
+    main {
+        padding: 1rem;
+    }
+
+    main h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-cont {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .info {
+        padding: 1rem;
+    }
+
+    footer img {
+        height: 350px;
+        object-fit: cover;
+    }
+
+    footer .social-links {
+        justify-content: center;
+    }
 }
